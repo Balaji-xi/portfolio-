@@ -1,19 +1,45 @@
-function reveal(){
+// typing animation
 
-let reveals=document.querySelectorAll(".reveal");
+const text = [
+"AI Creator",
+"Web Developer",
+"CSE Student",
+"Tech Enthusiast"
+];
 
-for(let i=0;i<reveals.length;i++){
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
 
-let windowHeight=window.innerHeight;
-let elementTop=reveals[i].getBoundingClientRect().top;
-let visible=150;
+(function type(){
 
-if(elementTop < windowHeight-visible){
-reveals[i].classList.add("active");
+if(count === text.length){
+count = 0;
 }
 
+currentText = text[count];
+letter = currentText.slice(0, ++index);
+
+document.querySelector(".typing").textContent = letter;
+
+if(letter.length === currentText.length){
+count++;
+index = 0;
 }
 
-}
+setTimeout(type,120);
 
-window.addEventListener("scroll",reveal);
+})();
+
+
+// particles background
+
+particlesJS("particles-js", {
+particles: {
+number: { value: 80 },
+size: { value: 3 },
+move: { speed: 2 },
+line_linked: { enable: true },
+},
+});
