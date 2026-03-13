@@ -1,19 +1,12 @@
-function reveal(){
+function toggleMenu(){
 
-let reveals=document.querySelectorAll(".reveal");
-
-for(let i=0;i<reveals.length;i++){
-
-let windowHeight=window.innerHeight;
-let elementTop=reveals[i].getBoundingClientRect().top;
-let visible=150;
-
-if(elementTop < windowHeight-visible){
-reveals[i].classList.add("active");
-}
+document.getElementById("navLinks").classList.toggle("active")
 
 }
 
-}
 
-window.addEventListener("scroll",reveal);
+function toggleMode(){
+
+document.body.classList.toggle("light")
+
+}
