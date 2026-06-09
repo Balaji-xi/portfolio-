@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // typing animation
 
 const text = [
@@ -17,6 +18,11 @@ let letter = "";
 if(count === text.length){
 count = 0;
 }
+=======
+function toggleMenu(){
+
+document.getElementById("navLinks").classList.toggle("active")
+>>>>>>> f7bbfaa31db4e80f1c1edd223d345e6ded6970a2
 
 currentText = text[count];
 letter = currentText.slice(0, ++index);
@@ -28,6 +34,7 @@ count++;
 index = 0;
 }
 
+<<<<<<< HEAD
 setTimeout(type,120);
 
 })();
@@ -43,3 +50,11 @@ move: { speed: 2 },
 line_linked: { enable: true },
 },
 });
+=======
+
+function toggleMode(){
+
+document.body.classList.toggle("light")
+
+}
+>>>>>>> f7bbfaa31db4e80f1c1edd223d345e6ded6970a2
